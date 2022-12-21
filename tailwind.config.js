@@ -4,8 +4,8 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				Roboto: ['Roboto Mono', 'monospace'],
-				Inter: ['Inter', 'sans-serif'],
+				Syne: ['Syne', ' sans-serif'],
+				Audio: ['Audiowide', ' sans-serif'],
 			},
 			animation: {
 				'spin-slow': 'spin 3s linear infinite',
