@@ -11,7 +11,7 @@ const Home: FC = () => {
 	return (
 		// bg-gradient-to-br from-[#7B00A0] via-[#AB42CB] to-[#FFFDFF]
 		<div className={styles.background}>
-			<section className="text-white body-font flex items-center justify-center min-h-screen  pt-[5rem] sm:pt-38 ">
+			<section className="text-white body-font flex items-center justify-center min-h-screen   sm:pt-38 ">
 				<div className="absolute w-full top-3">
 					{' '}
 					<Header />
