@@ -11,7 +11,7 @@ const Home: FC = () => {
 	return (
 		// bg-gradient-to-br from-[#7B00A0] via-[#AB42CB] to-[#FFFDFF]
 		<div className={styles.background}>
-			<section className="text-white body-font flex items-center justify-center min-h-screen  pt-32 sm:pt-38 ">
+			<section className="text-white body-font flex items-center justify-center min-h-screen  pt-[5rem] sm:pt-38 ">
 				<div className="absolute w-full top-3">
 					{' '}
 					<Header />
@@ -30,13 +30,17 @@ const Home: FC = () => {
 							product and platform that humanize the human
 						</p>
 						<div className="flex justify-center">
-							<button
-								className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded-tl-lg
+							<Link href="/options">
+								<button
+									className="text-[#5c0583] bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded-tl-lg rounded-br-lg
+
+								
 
 text-lg font-Syne font-semibold"
-							>
-								Button
-							</button>
+								>
+									ENTER
+								</button>
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -46,6 +50,3 @@ text-lg font-Syne font-semibold"
 }
 
 export default Home
-function mintShadeNFT(arg0: { args: any[] }) {
-	throw new Error('Function not implemented.')
-}

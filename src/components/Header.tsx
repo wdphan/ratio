@@ -10,7 +10,9 @@ const Header: FC = () => {
 			<div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
 				<a className="block pt-2">
 					<span className="sr-only">Home</span>
-					<Image width={40} height={40} src={logo} alt="logo" />
+					<Link href="/">
+						<Image width={40} height={40} src={logo} alt="logo" className="cursor-pointer" />
+					</Link>
 				</a>
 
 				<div className="flex flex-1 items-center justify-end md:justify-between">
