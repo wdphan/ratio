@@ -25,7 +25,7 @@ const Home: FC = () => {
 						<h1 className="flex flex-row content-center items-center justify-center pt-[-1rem] sm:mt-[-1.5rem] text-[6rem] sm:text-[10rem] tracking-tighter font-normal font-Audio">
 							RATIO
 						</h1>
-						<p className="max-w-2xl pt-[-1rem] sm:mt-[-1.5rem] pb-8 text-lg font-Syne">
+						<p className="max-w-2xl pt-[-1rem] sm:mt-[-1.5rem] pb-8 text-lg font-Syne ">
 							Hoomanize is a digital agency and developerment studio. We are helping company to create
 							product and platform that humanize the human
 						</p>
