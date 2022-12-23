@@ -2,11 +2,9 @@ import { FC, useState } from 'react'
 import { APP_NAME } from '@/lib/consts'
 import logo from 'images/logo.png'
 import Image from 'next/image'
-// import Header from '@/components/Header'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import styles from 'src/styles/app.module.css'
-import NFTs from 'src/components/accountNFTs.js'
 
 const Options = () => {
 	return (

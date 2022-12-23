@@ -45,7 +45,6 @@ const Fractionalize = () => {
 
 	useEffect(() => {
 		if (fetchForCollection) {
-			fetchNFTsForCollection()
 		} else fetchNFTs()
 	}, [fetchForCollection, fetchNFTs])
 
