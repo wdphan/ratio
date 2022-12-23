@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC, useCallback, useEffect, useState } from 'react'
 import { APP_NAME } from '@/lib/consts'
 import logo from 'images/logo.png'
 import Image from 'next/image'
@@ -6,19 +6,23 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import styles from 'src/styles/app.module.css'
-import AccountNFTs from 'src/components/accountNFTs'
 import { NFTCard } from '@/components/NFTCard'
+import { useAccount } from 'wagmi'
+import React from 'react'
+
 const Fractionalize = () => {
-	const [wallet, setWalletAddress] = useState('')
+	const [wallet, setWalletAddress] = React.useState<any>('')
 	const [collection, setCollectionAddress] = useState('')
 	const [NFTs, setNFTs] = useState([])
 	const [fetchForCollection, setFetchForCollection] = useState(false)
+	const { address, isConnecting, isDisconnected } = useAccount()
 
-	const fetchNFTs = async () => {
+	const fetchNFTs = useCallback(async () => {
 		let nfts
 		console.log('fetching nfts')
 		const api_key = 'A8A1Oo_UTB9IN5oNHfAc2tAxdR4UVwfM'
 		const baseURL = `https://eth-mainnet.alchemyapi.io/v2/${api_key}/getNFTs/`
+		setWalletAddress(address)
 
 		if (!collection.length) {
 			var requestOptions = {
@@ -37,7 +41,14 @@ const Fractionalize = () => {
 			console.log('nfts:', nfts)
 			setNFTs(nfts.ownedNfts)
 		}
-	}
+	}, [address, collection, wallet])
+
+	useEffect(() => {
+		if (fetchForCollection) {
+			fetchNFTsForCollection()
+		} else fetchNFTs()
+	}, [fetchForCollection, fetchNFTs])
+
 	return (
 		// bg-gradient-to-br from-[#7B00A0] via-[#AB42CB] to-[#FFFDFF]
 		<div className={styles.fractionalbackground}>
@@ -45,41 +56,17 @@ const Fractionalize = () => {
 			<div className="absolute w-full top-3">
 				<Header />
 			</div>
-			<div className="flex flex-col justify-center py-8  h-100vh items-center pt-44 ">
+			<div className="flex flex-col justify-center py-8  h-100vh items-center pt-[20rem] ">
 				<div className="flex flex-col w-full justify-center items-center gap-y-2">
-					<h1 className="mb-2 text-3xl w-3/4 text-center font-Roboto  font-normal text-black">
+					<h1 className="mb-2 text-3xl w-3/4 text-center font-normal text-white font-Audio">
 						ADD ADDRESSES TO YOUR NEW GROUP WITH A COUPLE CLICKS
 					</h1>
 
-					<input
-						disabled={fetchForCollection}
-						className="w-1/2 border-2 border-[#D9D9D9] py-2 px-2  text-[#EFEFEF]focus:outline-blue-300 mt-4 placeholder:italic"
-						onChange={e => {
-							setWalletAddress(e.target.value)
-						}}
-						value={wallet}
-						type={'text'}
-						placeholder="WALLET ADDRESS"
-					></input>
-
-					<div className="space-x-5 flex flex-row items-center justify-center">
-						<button
-							className={' text-black font-inter bg-[#D9D9D9] px-5 py-2 mt-3 mb-3 text-lg'}
-							onClick={() => {
-								if (fetchForCollection) {
-									fetchNFTsForCollection()
-								} else fetchNFTs()
-							}}
-						>
-							SEARCH
-						</button>
-					</div>
+					<div className="space-x-5 flex flex-row items-center justify-center"></div>
 				</div>
 				<div className="flex w-full">
 					<div className="flex flex-col items-center justify-center w-full">
-						{/* <div>FETCHED ADDRESSES</div> */}
-
-						<div className="flex flex-row flex-wrap gap-y-1 mt-4 w-5/6 gap-x-10 justify-center ">
+						<div className="flex flex-row flex-wrap gap-y-10 mt-4 w-5/6 gap-x-5 sm:gap-x-10 justify-center ">
 							{NFTs.length &&
 								NFTs.map(nft => {
 									return <NFTCard key={NFTs.length} nft={nft}></NFTCard>
