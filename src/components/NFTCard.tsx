@@ -8,13 +8,13 @@ export const NFTCard = ({ nft }) => {
 			</div>
 			<div className="flex flex-col y-gap-2 px-2 py-3  ">
 				<div className="">
-					<h2 className="text-xs text-white font-bold mt-0 font-Synetext-ellipsis">{nft.title}</h2>
+					<h2 className="text-xs font-Syne text-white font-bold mt-0 font-Synetext-ellipsis">{nft.title}</h2>
 					{/* <p className="text-[#EFEFEF]">Id: {nft.id.tokenId.substr(nft.id.tokenId.length - 4)}</p>
 					<p className="text-[#EFEFEF]">{`${nft.contract.address.substr(
 						0,
 						4
 					)}...${nft.contract.address.substr(nft.contract.address.length - 4)}`}</p> */}
-					<button className="border bg-white text-[#5c0583] mt-2 px-2 font-Audio rounded-br-lg rounded-tl-lg">
+					<button className="border bg-white text-[#5c0583] mt-2 px-2 font-Syne rounded-br-lg rounded-tl-lg font-semibold">
 						RATIO
 					</button>
 				</div>
