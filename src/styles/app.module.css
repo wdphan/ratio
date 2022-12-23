@@ -1,5 +1,5 @@
 .background {
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
 	background: linear-gradient(
 		-45deg,
@@ -19,6 +19,26 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.fractionalbackground {
+	width: 100vw;
+	height: 100%;
+	background: linear-gradient(
+		-45deg,
+		#3f51b1 0%,
+		#000000 13%,
+		#1b0a07 25%,
+		#310830 38%,
+		#46075a 50%,
+		#5c0583 62%,
+		#7203ac 75%,
+		#8702d6 87%,
+		#9d00ff 100%
+	);
+	background-size: 400% 400%;
+	animation: animate 10s ease-in-out infinite;
+	z-index: 1000;
 }
 
 @keyframes animate {

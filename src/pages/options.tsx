@@ -6,8 +6,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import styles from 'src/styles/app.module.css'
+import NFTs from 'src/components/accountNFTs.js'
 
-const Home: FC = () => {
+const Options = () => {
 	return (
 		// bg-gradient-to-br from-[#7B00A0] via-[#AB42CB] to-[#FFFDFF]
 		<div className={styles.background}>
@@ -22,21 +23,23 @@ const Home: FC = () => {
 							<div className="flex  p-8 sm:flex-row flex-col">
 								<div className="flex-grow space-y-5">
 									<h2 className="text-white text-4xl title-font font-medium font-Audio mb-3">
-										FRACTIONALIZE
+										SET VAULT
 									</h2>
 									<p className="leading-relaxed font-Syne text-white">
 										Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy.
 										Gastropub indxgo juice poutine.
 									</p>
-									<button
-										className="mt-3 flex text-[#5c0583] bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded-tl-lg rounded-br-lg
+									<Link href={'/fractionalize'}>
+										<button
+											className="mt-3 flex text-[#5c0583] bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded-tl-lg rounded-br-lg
 
 								
 
 text-lg font-Syne font-semibold"
-									>
-										ENTER
-									</button>
+										>
+											CREATE VAULT
+										</button>
+									</Link>
 								</div>
 							</div>
 						</div>
@@ -50,6 +53,7 @@ text-lg font-Syne font-semibold"
 										Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy.
 										Gastropub indxgo juice poutine.
 									</p>
+
 									<button
 										className="mt-3 flex text-[#5c0583] bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded-tl-lg rounded-br-lg
 
@@ -57,7 +61,7 @@ text-lg font-Syne font-semibold"
 
 text-lg font-Syne font-semibold"
 									>
-										ENTER
+										BUY RATIOS
 									</button>
 								</div>
 							</div>
@@ -69,4 +73,4 @@ text-lg font-Syne font-semibold"
 	)
 }
 
-export default Home
+export default Options
