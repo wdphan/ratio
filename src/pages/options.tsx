@@ -14,9 +14,9 @@ const Options = () => {
 				<div className="container px-5 py-24 mx-auto flex flex-wrap">
 					<div className="flex flex-wrap -m-4">
 						<div className="p-4 lg:w-1/2 max-w-2xl">
-							<div className="flex  p-8 sm:flex-row flex-col">
-								<div className="flex-grow space-y-5">
-									<h2 className="text-white text-4xl title-font font-medium font-Audio mb-3">
+							<div className="flex  p-8 sm:flex-row flex-col ">
+								<div className="flex-grow space-y-5 flex flex-col text-center content-center items-center justify-center">
+									<h2 className="text-white text-4xl title-font font-medium font-Audio ">
 										SET VAULT
 									</h2>
 									<p className="leading-relaxed font-Syne text-gray-200">
@@ -25,7 +25,7 @@ const Options = () => {
 									</p>
 									<Link href="/ratio">
 										<button
-											className="mt-3 flex text-[#5c0583] bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded-tl-lg rounded-br-lg
+											className="mt-3  flex text-[#5c0583] bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded-tl-lg rounded-br-lg
 
 								
 
@@ -39,8 +39,8 @@ text-lg font-Syne font-semibold"
 						</div>
 						<div className="p-4 lg:w-1/2 max-w-2xl">
 							<div className="flex  p-8 sm:flex-row flex-col">
-								<div className="flex-grow space-y-5">
-									<h2 className="text-white text-4xl title-font font-medium mb-3 font-Audio">
+								<div className="flex-grow space-y-5 flex flex-col text-center content-center items-center justify-center">
+									<h2 className="text-white text-4xl title-font font-medium  font-Audio">
 										MARKETPLACE
 									</h2>
 									<p className="leading-relaxed font-Syne text-gray-200">
