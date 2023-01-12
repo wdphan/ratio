@@ -1,5 +1,4 @@
 import { networkInterfaces } from 'os'
-import RatioModal from './modals/RatioModal'
 import { useState } from 'react'
 import React from 'react'
 
