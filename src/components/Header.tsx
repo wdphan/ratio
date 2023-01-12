@@ -19,16 +19,19 @@ const Header: FC = () => {
 					<nav aria-label="Site Nav" className="hidden md:block">
 						<ul className="flex items-center gap-6 font-Syne text-xl">
 							<li>
-								<a className=" transition hover:text-gray-500/75  text-white ">Fractionalize</a>
+								<Link href="/ratio">
+									<a className=" transition hover:text-gray-500/75  text-white ">Ratio</a>
+								</Link>
 							</li>
 							<li>
-								<a className=" transition hover:text-gray-500/75  text-white ">Buy</a>
+								<Link href="/marketplace">
+									<a className=" transition hover:text-gray-500/75  text-white ">Marketplace</a>
+								</Link>
 							</li>
 							<li>
-								<a className=" transition hover:text-gray-500/75  text-white ">Sell</a>
-							</li>
-							<li>
-								<a className=" transition hover:text-gray-500/75  text-white ">How-To</a>
+								<Link href="/faq">
+									<a className=" transition hover:text-gray-500/75  text-white ">FAQ</a>
+								</Link>
 							</li>
 						</ul>
 					</nav>

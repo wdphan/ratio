@@ -23,37 +23,40 @@ export const NFTCard = ({ nft }) => {
 						RATIO
 					</button> */}
 					<button
-						className="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+						className="text-[#5c0583] font-Syne font-semibold bg-gray-100 border-0 py-2 px-4 mt-3 focus:outline-none hover:bg-gray-200 rounded-tl-lg rounded-br-lg"
 						type="button"
 						onClick={() => setShowModal(true)}
 					>
-						Ratio
+						VAULT
 					</button>
 					{showModal ? (
 						<>
 							<div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
 								<div className="relative w-auto my-6 mx-auto max-w-3xl">
-									<div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full text-black bg-white outline-none focus:outline-none">
-										{/* <div className="flex items-center justify-center text-center p-5 border-b border-solid border-slate-200 rounded-t ">
-									<button
-										className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
-										onClick={() => setShowModal(false)}
-									>
-										<span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
-											×
-										</span>
-									</button>
-								</div> */}
+									<div className="border-0 rounded-lg shadow-lg relative flex flex-col text-black bg-white outline-none focus:outline-none">
+										<div className="flex items-center justify-end text-center p-5 border-solid border-slate-200 rounded-t ">
+											<button
+												className="text-[#5c0583] bg-gray-100 border-0 py-2 px-4 focus:outline-none hover:bg-gray-200 rounded-tl-lg rounded-br-lg"
+												type="button"
+												onClick={() => setShowModal(false)}
+											>
+												X
+											</button>
+										</div>
 										{/*body*/}
-										<div className="relative p-6 flex-col items-center justify-center content-center">
+
+										<div className="relative px-14 pb-6 flex-col items-center justify-center content-center mt-[-2.5rem]">
 											<h3 className="text-3xl flex items-center justify-center text-center font-semibold">
-												<img className="object-cover w-1/2" src={nft.media[0].gateway}></img>
+												<img
+													className="object-cover w-3/4 rounded-lg"
+													src={nft.media[0].gateway}
+												></img>
 											</h3>
-											<p className="my-4 text-slate-500 text-center text-lg leading-relaxed">
-												I always felt like I could do anything. That’s the main thing people are
-												controlled by! Thoughts- their perception of themselves! They're slowed
-												down by their perception of themselves. If you're taught you can’t do
-												anything, you won’t do anything. I was taught I could do everything.
+
+											<p className="my-4 text-[#5c0583] text-center text-lg leading-relaxed font-Syne">
+												Fractionalize this NFT with as many tokens as your would like.
+												Afterwards, you can list the token on the Ratio exchange for other users
+												to buy.
 											</p>
 											<div className="flex-col items-center justify-center content-center">
 												<input
@@ -63,27 +66,27 @@ export const NFTCard = ({ nft }) => {
 													step="1"
 													min="2"
 													max="1000"
-													className=" mb-2 h-9 bg-[#232323] w-full px-5 placeholder:text-[#42805F]  text-white "
-													placeholder=" TOKEN ID"
+													className="rounded-lg mb-2 h-9 bg-gray-100 border-[1px] w-full px-5 placeholder:text-[#5c0583]   placeholder:font-Syne placeholder:font-italic text-[#5c0583] placeholder:italic"
+													placeholder="# OF TOKENS"
 												/>
 											</div>
 										</div>
 
 										{/*footer*/}
-										<div className="flex items-center justify-center p-6 border-t border-solid border-slate-200 rounded-b">
+										<div className="flex items-center justify-center p-6 border-t border-solid border-slate-200 rounded-b space-x-5">
 											<button
-												className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+												className="text-[#5c0583] bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded-tl-lg rounded-br-lg font-Syne font-semibold"
 												type="button"
 												onClick={() => setShowModal(false)}
 											>
-												Ratio
+												RATIO
 											</button>
 											<button
-												className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+												className="text-[#5c0583] bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded-tl-lg rounded-br-lg font-Syne font-semibold"
 												type="button"
 												onClick={() => setShowModal(false)}
 											>
-												List Ratio For Sale
+												LIST FOR SALE
 											</button>
 										</div>
 									</div>

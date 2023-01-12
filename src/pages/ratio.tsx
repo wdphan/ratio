@@ -10,7 +10,7 @@ import { NFTCard } from '@/components/NFTCard'
 import { useAccount } from 'wagmi'
 import React from 'react'
 
-const Fractionalize = () => {
+const Ratio = () => {
 	const [wallet, setWalletAddress] = React.useState<any>('')
 	const [collection, setCollectionAddress] = useState('')
 	const [NFTs, setNFTs] = useState([])
@@ -55,11 +55,15 @@ const Fractionalize = () => {
 			<div className="absolute w-full top-3">
 				<Header />
 			</div>
-			<div className="flex flex-col justify-center py-8  h-100vh items-center pt-[20rem] ">
+			<div className="flex flex-col justify-center py-8 h-100vh items-center pt-[10rem] ">
 				<div className="flex flex-col w-full justify-center items-center gap-y-2">
-					<h1 className="mb-2 text-3xl w-3/4 text-center font-normal text-white font-Audio">
-						ADD ADDRESSES TO YOUR NEW GROUP WITH A COUPLE CLICKS
+					<h1 className="mb-5 text-5xl w-11/12 text-center font-normal text-white font-Audio">
+						RATIO YOUR NFTS
 					</h1>
+					<p className="w-7/12 lg:w-6/12 text-center mb-10 text-gray-200">
+						Fractionalize any NFT with as many tokens as your would like (up to 1000). Afterwards, you can
+						list the token on the Ratio exchange for other users to buy.
+					</p>
 
 					<div className="space-x-5 flex flex-row items-center justify-center"></div>
 				</div>
@@ -77,50 +81,5 @@ const Fractionalize = () => {
 		</div>
 	)
 }
-{
-	/* <div className="flex flex-row ">
-				<div className="w-1/2 ">
-					<h2 className="text-white text-4xl title-font font-medium font-Audio mb-3">SET VAULT DETAILS</h2>
-					<p className="leading-relaxed font-Syne text-white">Selected NFT - TITLE</p>
-					<p>Number of Ratios to Create - ERC20 Tokens</p>
-					<input
-						disabled={fetchForCollection}
-						className="w-1/2 border-2 border-[#D9D9D9] py-2 px-2  text-[#EFEFEF]focus:outline-blue-300 mt-4 placeholder:italic"
-						onChange={e => {
-							setWalletAddress(e.target.value)
-						}}
-						value={wallet}
-						type={'text'}
-						placeholder="WALLET ADDRESS"
-					></input>
-					<p className="">
-						Disclaimer: Number of Ratios to Create ergoiulehlie rblkrejfblkerjblkrjgbklrtjbl kjhbflkjhb
-						refkljhb ervkljbrevkljb revkljbrvekljbvrek
-					</p>
-					<Link href={'/fractionalize'}>
-						<button
-							className="mt-3 flex text-[#5c0583] bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded-tl-lg rounded-br-lg
 
-								
-
-											text-lg font-Syne font-semibold overflow-scroll:visible"
-							onClick={() => {
-								if (fetchForCollection) {
-									fetchNFTsForCollection()
-								} else fetchNFTs()
-							}}
-						>
-							SEARCH
-						</button>
-					</Link>
-				</div>
-				<div className="flex flex-row flex-wrap gap-y-1 mt-4 w-1/2 gap-x-10 justify-center ">
-					{NFTs.length &&
-						NFTs.map(nft => {
-							return <NFTCard key={NFTs.length} nft={nft}></NFTCard>
-						})}
-				</div>
-			</div> */
-}
-
-export default Fractionalize
+export default Ratio
