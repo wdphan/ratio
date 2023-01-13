@@ -27,17 +27,17 @@ const Web3Provider = ({ children }) => {
 			<ConnectKitProvider
 				customTheme={{
 					'--ck-connectbutton-color': 'white',
-					'--ck-connectbutton-background': '#232323',
-					'--ck-connectbutton-box-shadow': '#232323',
+					'--ck-connectbutton-background': '#5c0583',
+					'--ck-connectbutton-box-shadow': '#5c0583',
 					// button text on hover
 					'--ck-connectbutton-hover-color': 'white',
 					// modal button text color
-					'--ck-secondary-button-color': '#232323',
+					'--ck-secondary-button-color': '#5c0583',
 					// modal button background color
 					'--ck-secondary-button-background': 'white',
 					// modal background
-					'--ck-body-background': '#232323',
-					'--ck-secondary-button-box-shadow': '#232323',
+					'--ck-body-background': '#5c0583',
+					'--ck-secondary-button-box-shadow': '#5c0583',
 					//font
 					'--ck-font-family': '"Arial", "Rubik", Rubik',
 					// ETH text color
