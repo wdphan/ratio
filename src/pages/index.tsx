@@ -22,7 +22,7 @@ const Home: FC = () => {
 							RATIO
 						</h1>
 						<p className="max-w-3xl pt-[-1rem] sm:mt-[-1.5rem] pb-8 text-lg font-Syne text-gray-200">
-							A protocol that enables collective ownership and governance of one or more NFTs. The tokens
+							A protocol that enables collective ownership and governance of one or more NFTs. Ratios
 							function as normal ERC20 tokens which have governance over the NFT that they own.
 						</p>
 						<div className="flex justify-center">

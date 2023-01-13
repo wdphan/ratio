@@ -1,10 +1,29 @@
 import { networkInterfaces } from 'os'
 import { useState } from 'react'
 import React from 'react'
+import { useContractWrite, usePrepareContractWrite } from 'wagmi'
+import RatioVault from 'src/pages/abi/RatioVault.json'
+import { write } from 'fs'
 
 export const NFTCard = ({ nft }) => {
 	const [showModal, setShowModal] = React.useState(false)
 	const [value, setValue] = React.useState<any>('')
+
+	const { write: createVault } = useContractWrite({
+		mode: 'recklesslyUnprepared',
+		address: '0x970B60285bbbaAb923cc7484d15680B4055674fE',
+		abi: RatioVault,
+		functionName: 'nftInit',
+		args: [nft.contract.address, nft.id.tokenId, value],
+	})
+
+	const { write: list } = useContractWrite({
+		mode: 'recklesslyUnprepared',
+		address: '0x970B60285bbbaAb923cc7484d15680B4055674fE',
+		abi: RatioVault,
+		functionName: 'putForSale',
+	})
+
 	return (
 		<div className="w-1/4 flex flex-col ">
 			<div className="">
@@ -76,14 +95,14 @@ export const NFTCard = ({ nft }) => {
 											<button
 												className="text-[#5c0583] bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded-tl-lg rounded-br-lg font-Syne font-semibold"
 												type="button"
-												onClick={() => setShowModal(false)}
+												onClick={() => createVault?.()}
 											>
 												RATIO
 											</button>
 											<button
 												className="text-[#5c0583] bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded-tl-lg rounded-br-lg font-Syne font-semibold"
 												type="button"
-												onClick={() => setShowModal(false)}
+												onClick={() => list?.()}
 											>
 												LIST FOR SALE
 											</button>
