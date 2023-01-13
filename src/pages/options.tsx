@@ -20,8 +20,8 @@ const Options = () => {
 										SET VAULT
 									</h2>
 									<p className="leading-relaxed font-Syne text-gray-200">
-										Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy.
-										Gastropub indxgo juice poutine.
+										Create an NFT Vault by depositing an NFT. Decide how many Ratios the NFT would
+										split into.
 									</p>
 									<Link href="/ratio">
 										<button
@@ -44,8 +44,8 @@ text-lg font-Syne font-semibold"
 										MARKETPLACE
 									</h2>
 									<p className="leading-relaxed font-Syne text-gray-200">
-										Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy.
-										Gastropub indxgo juice poutine.
+										Buy Ratios from other listed Vaults. Own a fraction of an NFT for a fraction of
+										the price!
 									</p>
 									<Link href="/marketplace">
 										<button
