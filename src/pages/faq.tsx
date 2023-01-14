@@ -65,7 +65,7 @@ const FAQ = () => {
 								</p>
 								<p className="mt-4 text-base text-gray-200 font-Syne">
 									The custodian is simply the smart contract itself, the underlying NFTs are not
-									hosted on any centralized databases (i.e. vaults are on decentralized, audited smart
+									hosted on any centralized databases (i.e. vaults are on decentralized smart
 									contracts.)
 								</p>
 							</div>
